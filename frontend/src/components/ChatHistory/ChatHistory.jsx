@@ -1,13 +1,15 @@
+
 import React from 'react';
-// import './ChatHistory.scss';
+import Message from '../Message/Message';
 
 const ChatHistory = ({ chatHistory }) => {
+  console.log(chatHistory)
   return (
     <div className="chat-history">
       {chatHistory.length > 0 ? (
         chatHistory.map((message, index) => (
           <div key={index} className="chat-message">
-            {message}
+            <Message message={message} />
           </div>
         ))
       ) : (
